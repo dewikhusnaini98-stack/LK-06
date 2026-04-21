@@ -1,0 +1,221 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  background: #1B1931;
+  line-height: 1.6;
+}
+
+/* ================= */
+/* NAVBAR */
+/* ================= */
+.navbar {
+  background: #44174e;
+  color: white;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  font-size: 20px;
+}
+
+/* MENU */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+/* ================= */
+/* HERO */
+/* ================= */
+.hero {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 3px 8px #44174e;
+}
+
+/* ================= */
+/* MAIN */
+/* ================= */
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+/* CARD */
+article {
+  background: #2C2B30;
+  color: #fafafa;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px #44174e;
+}
+
+/* TYPO */
+h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-bottom: 5px;
+}
+
+/* LIST */
+ul {
+  margin-left: 20px;
+}
+
+/* GRID */
+.skill-container,
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* FORM */
+form {
+  background: transparent;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #44174e;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 3px 8px #44174e;
+}
+
+#hasilPendaftaran {
+  background: transparent;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #44174e;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 3px 8px #44174e;
+  margin-top: 20px;
+}
+
+/* INPUT & TEXTAREA */
+input,
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #44174e;
+  background: transparent;
+  color: #fff;
+}
+
+/* SELECT */
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #44174e;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+/* OPTION (DROPDOWN) */
+select option {
+  background: #fff;
+  color: #000;
+}
+
+/* BUTTON */
+button {
+  background: #44174e;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #0056b3;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #44174e;
+  color: white;
+}
+
+/* ================= */
+/* RESPONSIVE */
+/* ================= */
+
+/* TABLET */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+  }
+
+  .skill-container,
+  .project-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .skill-container,
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
