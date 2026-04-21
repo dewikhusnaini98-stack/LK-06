@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Profil Saya</h1>
+            <!-- NAVIGATION -->
+    <nav>
+        <a href="#about">Tentang</a> |
+        <a href="#services">Layanan</a> |
+        <a href="#contact">Kontak</a>
+    </nav>
+    <br>
+    </header>
+
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+    <div>
+        <br>
+        <img src="dewi gen5.jpg" alt="profil saya" width="150" height="150";
+            <p>Selamat datang di halaman profil saya.</p>
+    </div>
+        <!-- SECTION: Tentang -->
+        <section id="about">
+            <article>
+                <h2>Tentang Saya</h2> 
+                <p>
+                    Nama saya adalah Dewi Nafiatul Khusnaini. Dan saya adalah
+                    seorang mahasiswi semester 4 yang sedang belajar pemrograman web.
+                    Ini adalah contoh landing page sederhana menggunakan HTML semantik.
+                    Yang berisi mengenai tentang saya, layanan, dan form Pendaftaran
+                    yang dapat diisi.
+                </p>
+            </article>
+        </section>
+
+        <!-- SECTION: Layanan -->
+        <section id="services">
+            <article>
+                <h2>Layanan</h2>
+                <ul>
+                    <li>Joki Tugas SMP</li>
+                    <li>Desain Sederhana</li>
+                    <li>Edit Video</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- SECTION: Form Pendaftaran -->
+        <section id="contact">
+            <article>
+                <h2>Form Pendaftaran</h2>
+
+                <!-- FORM -->
+                <form>
+
+                    <!-- Nama -->
+                    <label for="nama">Nama:</label><br>
+                    <input type="text" id="nama" name="nama" required><br><br>
+
+                    <!-- Email -->
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <!-- Nomor HP -->
+                    <label for="hp">Nomor HP:</label><br>
+                    <input type="tel" id="hp" name="hp" required><br><br>
+
+                    <!-- Kategori -->
+                    <label for="kategori">Kategori:</label><br>
+                    <select id="kategori" name="kategori" required>
+                        <option value=""> Pilih Kategori </option>
+                        <option value="web">Joki</option>
+                        <option value="design">Desain</option>
+                        <option value="konsultasi">Edit</option>
+                    </select><br><br>
+
+                    <!-- Pesan -->
+                    <label for="pesan">Pesan:</label><br>
+                    <textarea id="pesan" name="pesan" rows="4" required></textarea><br><br>
+
+                    <!-- Tombol -->
+                    <button type="submit">Daftar</button>
+
+                </form>
+                <br><hr>
+
+            </article>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Profil Saya</p>
+    </footer>
+
+</body>
+</html>
