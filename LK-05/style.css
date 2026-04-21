@@ -181,10 +181,44 @@ button:hover {
 
 /* FOOTER */
 footer {
-  text-align: center;
-  padding: 15px;
+  padding: 17px;
   background: #44174e;
   color: white;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.visitor-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.visitor-counter:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+.visitor-counter i {
+  color: #00e676;
+  /* Warna hijau neon eye-catching */
+  font-size: 15px;
 }
 
 /* ================= */
@@ -279,6 +313,11 @@ footer {
 
 /* MOBILE */
 @media (max-width: 480px) {
+
+  .footer-content {
+    flex-direction: column;
+    gap: 12px;
+  }
 
   .skill-container,
   .project-container {

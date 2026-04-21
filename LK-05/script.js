@@ -61,3 +61,13 @@ socialLinks.forEach(link => {
         }, 600);
     });
 });
+
+// --- Fitur Visitor ---
+let count = localStorage.getItem('visitorCount');
+if (!count) {
+    count = 1;
+} else {
+    count = parseInt(count) + 1;
+}
+localStorage.setItem('visitorCount', count);
+document.getElementById('visitorCount').innerText = count.toLocaleString('id-ID');
