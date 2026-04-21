@@ -7,7 +7,7 @@ const pesanInput = document.getElementById('pesan');
 const hasil = document.getElementById('hasilPendaftaran');
 const notif = document.getElementById('notif');
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const nama = nameInput.value.trim();
@@ -26,7 +26,7 @@ form.addEventListener("submit", function(event) {
         return;
     }
 
-hasil.innerHTML = `
+    hasil.innerHTML = `
     <h2>Hasil Input:</h2>
     <p style="color:lightgreen;"><b> Data berhasil dikirim! ✅</b></p>
     <p>Nama: ${nama}</p>
@@ -37,4 +37,27 @@ hasil.innerHTML = `
 `;
 
     form.reset();
+});
+
+// --- Interaksi Sosial Media (Ripple Effect) ---
+const socialLinks = document.querySelectorAll('.social-link');
+
+socialLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+        let ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+
+        let rect = this.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+
+        this.appendChild(ripple);
+
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+    });
 });

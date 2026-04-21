@@ -155,7 +155,7 @@ select {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #44174e;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
 
@@ -188,6 +188,75 @@ footer {
 }
 
 /* ================= */
+/* SOSIAL MEDIA */
+/* ================= */
+#sosmed {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #2C2B30;
+  color: #fafafa;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effects Container */
+.social-link:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 15px rgba(68, 23, 78, 0.6);
+}
+
+.social-link#link-linkedin:hover {
+  background: #0077b5;
+  color: white;
+}
+
+.social-link#link-github:hover {
+  background: #333;
+  color: white;
+}
+
+.social-link#link-instagram:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+}
+
+/* Ripple Animasi dari JS */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple-anim 0.6s linear;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes ripple-anim {
+  to {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
+
+/* ================= */
 /* RESPONSIVE */
 /* ================= */
 
@@ -210,6 +279,7 @@ footer {
 
 /* MOBILE */
 @media (max-width: 480px) {
+
   .skill-container,
   .project-container {
     grid-template-columns: 1fr;
