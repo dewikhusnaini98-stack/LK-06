@@ -71,3 +71,28 @@ if (!count) {
 }
 localStorage.setItem('visitorCount', count);
 document.getElementById('visitorCount').innerText = count.toLocaleString('id-ID');
+
+// --- Fitur Toggle Theme (Dark/Light Mode) ---
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+const body = document.body;
+
+// Cek preferensi user dari local storage saat hal dimuat
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'light') {
+    body.classList.add('light-mode');
+    themeIcon.classList.replace('fa-sun', 'fa-moon');
+}
+
+// Event listener saat tombol tema di-klik
+themeToggleBtn.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+
+    if (body.classList.contains('light-mode')) {
+        localStorage.setItem('theme', 'light');
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+    } else {
+        localStorage.setItem('theme', 'dark');
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+    }
+});
